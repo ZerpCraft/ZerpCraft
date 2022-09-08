@@ -1,1 +1,14 @@
-Test
+The ZerpCraft plugin was originally born out of the XRP Tipper project. The goal was to mint Minecraft land as NFTs on the XRP Ledger. Originally launched on the XLS-19 standard, this codebase contains both examples for minting an NFT on the XLS-19 and XLS-20 standards. The NFT holds a set of coordinates that the plugin then reads to orchestrate land ownership.
+
+Microsoft announced that NFTs and blockchain integrations were not allowed on their client or server software. This effectively has shuttered the ZerpCraft project. In order to provide transparency as well as examples for other developers, I have published the code here to server as a reference. The code is basically feature complete for the XLS-20 launch, but is hard coded in many areas to my specific starter world. Additionally there's a decent amount of sloppy "get it working" code that I won't be fixing now that the project cannot be developed further. Nevertheless, I believe that there are some valuable examples written into the codebase that could be of use to other XRPL developers including:
+
+* XUMM Sign In via QR code
+* XUMM push requests
+* Websocket listening for XLS-20 NFT ownership changes
+* Stamping an XLS-19 NFT to the wallet domain field
+* Querying XRPL nodes
+* Accepting a NFTOffer
+
+Not included in this codebase is any code needed to mint XLS-20 NFTs. The plugin was never intended to mint NFTs directly and the code needed to interact securely with a wallet secret should not be hosted on a Minecraft server IMO.
+
+I will not be providing assistance to get this plugin compiled or in a working state as that would violate Microsoft's EULA. I'm always happy to give insight into the specifics of the XRPL code as well as any game-side questions. I won't be monitoring this repo super closely, so find me on Twitter @ZerpCraft.
