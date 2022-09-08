@@ -1,0 +1,93 @@
+name: ZerpCraft
+version: '${project.version}'
+author: Jackson Sardello
+main: com.ezpzxrp.zerpcraft.ZerpCraft
+api-version: 1.16
+depend: [WorldGuard]
+commands:
+  zcRegister:
+    description: Register your XUMM wallet with this server
+    usage: /zcRegister
+  zcSend:
+    description: Send XRP to another player. Players can only send/receive XRP if they are registered with the server
+    usage: /zcSend
+  zcGetToken:
+    description: Return the registered player's XUMM token
+    usage: /zcGetToken
+  zcBid:
+    description: Places a bid on the current auction
+    usage: /zcBid
+  zcSetBidThreshold:
+    description: Set the bidding threshold to the supplied number
+    usage: /zcSetBidThreshold
+  zcSetBidIncrement:
+    description: Set the bidding increment to the supplied number
+    usage: /zcSetBidIncrement
+  zcGetBidThreshold:
+    description: Get/broadcast the current winning bid + player
+    usage: /zcGetBidThreshold
+  zcCloseAuctionCountdown:
+    description: Starts the countdown to close the auction
+    usage: /zcCloseAuctionCountdown
+  zcGetAuctionWinnerName:
+    description: Logs out the auction winner's name
+    usage: /zcGetAuctionWinnerName
+  zcRequestPayment:
+    description: Performs a XUMM push request to a player to pay the server's wallet
+    usage: /zcRequestPayment
+  zcStampNFT:
+    description: Manually stamp an NFT to the player's wallet
+    usage: /zcStampNFT
+  zcToggleFNFT:
+    description: Locks or unlocks a range of FNFTs
+    usage: /zcToggleFNFT
+  zcPos1:
+    description: Sets the first point for purchasing Open Land
+    usage: /zcPos1
+  zcPos2:
+    description: Sets the second point for purchasing Open Land
+    usage: /zcPos2
+  zcToggleLandSale:
+    description: Used to open and close land sale.
+    usage: /zcToggleLandSale
+  zcToggleFNFTPrice:
+    description: I mess this up
+    usage: /zcToggleFNFTPice
+  zcProfile:
+    description: Shows the player their profile information
+    usage: /zcProfile
+  zcTogglePurchase:
+    description: Lock or unlock a player's purchasing ability
+    usage: /zcTogglePurchase
+  zcTogglePurchasing:
+    description: Override if the game thinks a player is stuck purchasing
+    usage: /zcTogglePurchasing
+  zcProvisionNFTs:
+    description: Queues up a player so that their NFTs will be pulled down from the XRPL
+    usage: /zcProvisionNFTs
+  zcOverrideDomain:
+    description: Reconstructs a Domain from the ground up.
+    usage: /zcOverrideDomain
+  zcXLS20:
+    description: Initiates migration of player's XLS-19 tokens to XLS-20 versions
+    usage: /zcXLS20
+  zcOptIn:
+    description: Indicates that the player's wallet can be public. Used to P2P XRP transactions
+    usage: /zcOptIn
+  zcOptOut:
+    description: Takes player's wallet private so only the server knows its address
+    usage: /zcOptOut
+  zcSync:
+    description: Checks the registered wallet for ZerpCraft NFTs. Assigns/updates regions.
+  zcDeleteRegistration:
+    description: Removes a player's registration and all associated wallet ownership
+    usage: /zcDeleteRegistration
+
+permissions:
+  zerpcraft.*:
+    children:
+      zerpcraft.zcXLS20: true
+  zerpcraft.zcXLS20:
+    default: op
+  zerpcraft.zcSend:
+    default: op

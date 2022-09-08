@@ -1,0 +1,8 @@
+General:
+  Server:
+    Wallet: rZerpMcPjoRGzaScS86y8WuNQoRY8MwJG
+    XUMM:
+      API_KEY:
+      API_SECRET:
+  NFT:
+    Roles: [{"Prefix":"FXX","RoleName":"Founder"},{"Prefix":"LXX","RoleName":"Landowner"}]
